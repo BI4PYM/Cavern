@@ -57,17 +57,24 @@ namespace CavernizeGUI.Consts {
             string culture = Settings.Default.language;
             if (string.IsNullOrEmpty(culture)) {
                 culture = CultureInfo.CurrentUICulture.Name;
-            } else if (culture == "en-US") { // Forced default
+            } else if (culture == "en-US") {
                 culture = string.Empty;
             }
 
             if (Array.BinarySearch(supported, culture) >= 0) {
                 resource += '.' + culture;
             }
+            else if (culture.Length > 0 && culture.Contains('-')) {
+                string languagePrefix = culture.Substring(0, culture.IndexOf('-') + 3); // 获取如 "zh-CN"
+                if (Array.BinarySearch(supported, languagePrefix) >= 0) {
+                    resource += '.' + languagePrefix;
+                }
+            }
+            
             return new() {
                 Source = new Uri($";component/Resources/{resource}.xaml", UriKind.RelativeOrAbsolute)
-            };
-        }
+    };
+}
 
         /// <summary>
         /// Checks if the system is set to a language that has no available localization.
