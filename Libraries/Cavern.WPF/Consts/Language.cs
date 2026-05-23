@@ -122,16 +122,23 @@ namespace Cavern.WPF.Consts {
         /// Get the translation of a resource file in the user's language, or in English if a translation couldn't be found.
         /// </summary>
         static ResourceDictionary GetFor(string resource) {
-            string culture = Override;
+            string culture = Settings.Default.language;
             if (string.IsNullOrEmpty(culture)) {
                 culture = CultureInfo.CurrentUICulture.Name;
-            } else if (culture == "en-US") { // Forced default
+            } else if (culture == "en-US") {
                 culture = string.Empty;
             }
 
             if (Array.BinarySearch(supported, culture) >= 0) {
                 resource += '.' + culture;
             }
+            else if (culture.Length > 0 && culture.Contains('-')) {
+                string languagePrefix = culture.Substring(0, culture.IndexOf('-') + 3); // 获取如 "zh-CN"
+                if (Array.BinarySearch(supported, languagePrefix) >= 0) {
+                    resource += '.' + languagePrefix;
+                }
+            }
+            
             return new() {
                 Source = new Uri($"/Cavern.WPF;component/Resources/{resource}.xaml", UriKind.RelativeOrAbsolute)
             };
