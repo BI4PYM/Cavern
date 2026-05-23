@@ -2,10 +2,10 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:system="clr-namespace:System;assembly=mscorlib">
     <system:String x:Key="Title">双二阶滤波器编辑器</system:String>
-    <system:String x:Key="FType">滤波器类型:</system:String>
-    <system:String x:Key="CenFr">中心频率:</system:String>
-    <system:String x:Key="QFact">Q值:</system:String>
-    <system:String x:Key="GainD">增益(dB):</system:String>
+    <system:String x:Key="FType">滤波器类型：</system:String>
+    <system:String x:Key="CenFr">中心频率：</system:String>
+    <system:String x:Key="QFact">Q值：</system:String>
+    <system:String x:Key="GainD">增益(dB)：</system:String>
     <system:String x:Key="SwapP">相位交换</system:String>
     <system:String x:Key="Spect">频谱</system:String>
     <system:String x:Key="Phase">相位</system:String>
