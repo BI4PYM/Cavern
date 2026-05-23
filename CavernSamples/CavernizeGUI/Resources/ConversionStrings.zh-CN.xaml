@@ -1,0 +1,6 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+	<system:String x:Key="InvRo">根文件无效。必须包含文件扩展名。</system:String>
+    <system:String x:Key="FiltN">在导出文件中未找到{0}通道的卷积均衡器({1})。</system:String>
+</ResourceDictionary>
