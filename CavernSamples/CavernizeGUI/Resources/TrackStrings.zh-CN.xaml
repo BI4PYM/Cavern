@@ -1,0 +1,36 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <!-- Track info -->
+    <system:String x:Key="NoSup">Cavern不支持的音轨</system:String>
+    <system:String x:Key="E3JOC">带联合对象的增强型AC-3</system:String>
+    <system:String x:Key="ObTra">基于对象的音轨</system:String>
+    <system:String x:Key="ChTra">基于声道的音轨</system:String>
+    <system:String x:Key="SouCh">源声道</system:String>
+    <system:String x:Key="MatBe">矩阵式基础声道</system:String>
+    <system:String x:Key="MatOb">矩阵式对象</system:String>
+    <system:String x:Key="SouBe">基础声道</system:String>
+    <system:String x:Key="SouDy">动态对象</system:String>
+    <system:String x:Key="Chans">声道</system:String>
+    <system:String x:Key="WiObj">带着对象</system:String>
+
+    <!-- Invalid track -->
+    <system:String x:Key="InvTr">无法解码此音轨。解码过程中发生以下错误：</system:String>
+    <system:String x:Key="Later">这可能会在后续版本中修复。请尝试更新Cavernize，如果问题在最新版本中仍然存在，请通过www.sbence.hu联系开发者。</system:String>
+
+    <!-- Translatable codec names -->
+    <system:String x:Key="PCM_Float">PCM（浮点型）</system:String>
+    <system:String x:Key="PCM_LE">PCM（整型）</system:String>
+
+    <!-- Export formats -->
+    <system:String x:Key="C_AC3">AC-3（中等质量，支持SPDIF）</system:String>
+    <system:String x:Key="CEAC3">增强型AC-3（中等质量，支持HDMI ARC）</system:String>
+    <system:String x:Key="COpus">Opus（透明音质，体积小）</system:String>
+    <system:String x:Key="CFLAC">FLAC（无损，体积大）</system:String>
+    <system:String x:Key="CPCMI">PCM，整型（无损，体积较大）</system:String>
+    <system:String x:Key="CPCMF">PCM，浮点型（非必要，体积最大）</system:String>
+    <system:String x:Key="CADMC">ADM广播波形格式（紧凑型）</system:String>
+    <system:String x:Key="CADMA">ADM广播波形格式（杜比全景声）</system:String>
+    <system:String x:Key="CDAMF">杜比全景声母版格式</system:String>
+    <system:String x:Key="C_LAF">无限音频格式</system:String>
+</ResourceDictionary>
