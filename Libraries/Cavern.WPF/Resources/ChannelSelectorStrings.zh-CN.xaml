@@ -11,7 +11,7 @@
     <system:String x:Key="SpGWL">左宽置</system:String>
     <system:String x:Key="SpGWR">右宽置</system:String>
     <system:String x:Key="SpGSL">左侧置</system:String>
-    <system:String x:Key="SpLFE">低频效果(LFE)</system:String>
+    <system:String x:Key="SpLFE">低音</system:String>
     <system:String x:Key="SpGSR">右侧置</system:String>
     <system:String x:Key="SpGRL">左后置</system:String>
     <system:String x:Key="SpGRC">中后置</system:String>
