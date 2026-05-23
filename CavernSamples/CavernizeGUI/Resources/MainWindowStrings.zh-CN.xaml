@@ -1,0 +1,103 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <!-- UI -->
+    <system:String x:Key="MenuR">渲染</system:String>
+    <system:String x:Key="Upmix">上混设置(_U)...</system:String>
+    <system:String x:Key="LoadV">为虚拟器(_V)加载HRTF/HRIR集</system:String>
+    <system:String x:Key="SpVir">扬声器高度虚拟化(_H)</system:String>
+    <system:String x:Key="FiltH">应用输出滤波器(_F)</system:String>
+    <system:String x:Key="FiltT">加载从QuickEQ导出的卷积均衡器集，用于目标系统，作为转换内容中的内置房间校正。</system:String>
+    <system:String x:Key="MuBeH">静音基础声道(_B)</system:String>
+    <system:String x:Key="MuBeT">仅渲染位置不固定、可移动的对象。</system:String>
+    <system:String x:Key="MuGrH">静音地面声道(_G)</system:String>
+    <system:String x:Key="MuGrT">所有仅来自地面扬声器的声音将被静音。</system:String>
+    <system:String x:Key="For24">强制24位PCM(_b)（速度较慢，文件更大，无感知提升）</system:String>
+    <system:String x:Key="SuSwa">交换侧置/后置输出通道(_w)</system:String>
+    <system:String x:Key="WavCh">跳过RIFF WAVE通道掩码（绕过限制）</system:String>
+    <system:String x:Key="SMetH">显示元数据...</system:String>
+    <system:String x:Key="SMetT">显示所选音轨的编解码器特定解码字段。</system:String>
+    <system:String x:Key="ReMoH">仅报告模式(_R)</system:String>
+    <system:String x:Key="ReMoT">要仅检查内容是否真正基于对象，请启用此选项，渲染后将提供渲染后报告，而不会向磁盘写入任何内容。</system:String>
+    <system:String x:Key="DeGrH">质量分析与评级</system:String>
+    <system:String x:Key="DeGrT">测量感知音频质量指标并对内容进行评级。此信息显示在渲染后报告中。</system:String>
+    <system:String x:Key="PReSh">显示渲染后报告(_S)...</system:String>
+    <system:String x:Key="PReRe">渲染后报告</system:String>
+    <system:String x:Key="MenuH">帮助</system:String>
+    <system:String x:Key="UsrGu">用户指南(_U)</system:String>
+    <system:String x:Key="About">关于(_A)</system:String>
+    <system:String x:Key="MenuL">语言</system:String>
+    <system:String x:Key="LanEn">英语</system:String>
+    <system:String x:Key="LanHu">匈牙利语</system:String>
+    <system:String x:Key="SySet">系统</system:String>
+    <system:String x:Key="RSInf">选择一个布局，并相应地放置您的扬声器。点击"显示接线"按钮查看哪个输出将对应哪个实际通道。
+        为获得最佳音频质量，请使用QuickEQ校准您的系统。</system:String>
+    <system:String x:Key="RndTg">渲染目标：</system:String>
+    <system:String x:Key="DisWi">显示接线</system:String>
+    <system:String x:Key="FFLoc">定位FFmpeg</system:String>
+    <system:String x:Key="FFDes">使用此按钮定位FFmpeg。下载它并选择下载文件夹中的bin目录下的ffmpeg.exe。
+        Cavernize将使用FFmpeg进行重新编码。此临时解决方法会占用大量空间，因此对于2小时的电影，建议有10GB的
+        可用空间。</system:String>
+    <system:String x:Key="CoPro">内容</system:String>
+    <system:String x:Key="OpCnt">打开</system:String>
+    <system:String x:Key="OpTrk">音轨：</system:String>
+    <system:String x:Key="OpOut">输出：</system:String>
+    <system:String x:Key="OpRnd">渲染</system:String>
+    <system:String x:Key="ChkUp">自动检查更新</system:String>
+    <system:String x:Key="ChkTt">定期自动检查是否有可用的新版本。</system:String>
+    <system:String x:Key="Queue">队列</system:String>
+    <system:String x:Key="QuDes">作业可以排队依次处理，而无需手动逐个渲染。
+        点击"添加到队列"按钮将设置好的转换添加到此队列，然后点击"处理队列"
+        开始渲染排队的内容。</system:String>
+    <system:String x:Key="QuAdd">添加到队列</system:String>
+    <system:String x:Key="QuRem">移除所选</system:String>
+    <system:String x:Key="QuSta">处理</system:String>
+    <!-- Code behind -->
+    <system:String x:Key="dnErr">您的.NET 6安装已损坏，无法加载。请从Microsoft安装最新版本。
+按任意键退出...</system:String>
+    <system:String x:Key="DropF">只能同时将多个文件拖放到队列中。
+拖动窗口右侧以显示队列。</system:String>
+    <system:String x:Key="IrErr">脉冲响应文件无效。错误：{0}</system:String>
+    <system:String x:Key="ImFmt">所有支持的格式|{0}|
+电影|*.mkv;*.mka;*.mov;*.mp4;*.qt;*.webm;*.weba|
+(增强型)AC-3|*.ac3;*.eac3;*.ec3|
+Core Audio格式|*.caf|
+杜比全景声母版格式|*.atmos|
+RIFF WAVE, ADM BWF|*.wav|
+无限音频格式|*.laf</system:String>
+    <system:String x:Key="OpRun">已有操作正在运行，请等待其完成。</system:String>
+    <system:String x:Key="OpRes">更改将在重启Cavernize后生效。</system:String>
+    <system:String x:Key="LdSrc">请加载至少包含1个支持渲染的音轨的源文件。</system:String>
+    <system:String x:Key="UnTrk">所选音轨不支持渲染。</system:String>
+    <system:String x:Key="ChCnt">渲染目标的通道数({0})大于所选格式可处理的通道数({1})。
+请选择不同的输出格式或设置通道数更少的渲染目标。</system:String>
+    <system:String x:Key="UnExt">文件名包含不支持的扩展名。</system:String>
+    <system:String x:Key="UnCod">此编解码器不支持导出。</system:String>
+    <system:String x:Key="Start">开始渲染...</system:String>
+    <system:String x:Key="ExpOk">完成！</system:String>
+    <system:String x:Key="Error">错误</system:String>
+    <system:String x:Key="FiltI">脉冲响应包|*.wav</system:String>
+    <system:String x:Key="FiltF">Cavern QuickEQ卷积均衡器|*.txt</system:String>
+    <system:String x:Key="FiltC">采样率冲突：耳机虚拟化和输出滤波仅在采样率匹配时才能同时工作。必须禁用其中一项。</system:String>
+    <system:String x:Key="FFRea">就绪！</system:String>
+    <system:String x:Key="FFNRe">未找到FFmpeg，将应用编解码器限制。</system:String>
+    <system:String x:Key="ProgP">正在渲染... ({0}，速度：{1}x，剩余：{2})</system:String>
+    <system:String x:Key="FinaP">正在完成... ({0})</system:String>
+    <system:String x:Key="DropI">以下拖放的文件不受支持或已损坏：</system:String>
+    <system:String x:Key="AbouH">关于</system:String>
+    <system:String x:Key="AbouA">使用CavernAmp加速性能。</system:String>
+    <system:String x:Key="ReQOp">无法从正在处理的队列中移除元素。</system:String>
+    <system:String x:Key="ReQSe">未选择任何队列项。</system:String>
+    <system:String x:Key="FFOnl">所选输出格式需要FFmpeg。请使用"定位FFmpeg"
+按钮定位它，如果需要帮助，请点击帮助/用户指南按钮。</system:String>
+    <system:String x:Key="CMetT">编解码器元数据</system:String>
+    <system:String x:Key="CMeET">请先加载文件。</system:String>
+    <system:String x:Key="CMeUT">Cavern API尚不支持显示所选音轨的元数据。</system:String>
+    <system:String x:Key="JocWa">此文件的某些部分使用稀疏JOC编码。E-AC-3标准的这部分没有正确记录，因此音频中可能会出现静音段。</system:String>
+    <system:String x:Key="RenEr">无法渲染{0}处的音频。处理将继续，但该时间戳之后的音轨将不完整。确切错误：{1}</system:String>
+    <system:String x:Key="SpViE">当前布局不支持扬声器高度虚拟化。请禁用此选项或选择仅包含地面通道的布局。</system:String>
+    <system:String x:Key="QuAlT">合并处理</system:String>
+    <system:String x:Key="QuAll">您是否要为所有添加到队列的文件选择单个输出文件夹？
+如果按"是"，所有文件将被处理到所选文件夹中的默认容器。
+如果按"否"，您可以分别选择输出文件夹、文件名和容器格式。</system:String>
+</ResourceDictionary>
