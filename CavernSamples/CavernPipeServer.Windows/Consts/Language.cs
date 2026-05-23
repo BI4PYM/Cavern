@@ -17,13 +17,27 @@ static class Language {
     /// Get the translation of a resource file in the user's language, or in English if a translation couldn't be found.
     /// </summary>
     static ResourceDictionary GetFor(string resource) {
-        if (Array.BinarySearch(supported, CultureInfo.CurrentUICulture.Name) >= 0) {
-            resource += '.' + CultureInfo.CurrentUICulture.Name;
-        }
-        return new() {
-            Source = new Uri($";component/Resources/{resource}.xaml", UriKind.RelativeOrAbsolute)
-        };
-    }
+            string culture = Settings.Default.language;
+            if (string.IsNullOrEmpty(culture)) {
+                culture = CultureInfo.CurrentUICulture.Name;
+            } else if (culture == "en-US") {
+                culture = string.Empty;
+            }
+
+            if (Array.BinarySearch(supported, culture) >= 0) {
+                resource += '.' + culture;
+            }
+            else if (culture.Length > 0 && culture.Contains('-')) {
+                string languagePrefix = culture.Substring(0, culture.IndexOf('-') + 3); // 获取如 "zh-CN"
+                if (Array.BinarySearch(supported, languagePrefix) >= 0) {
+                    resource += '.' + languagePrefix;
+                }
+            }
+            
+            return new() {
+                Source = new Uri($";component/Resources/{resource}.xaml", UriKind.RelativeOrAbsolute)
+    };
+}
 
     /// <summary>
     /// Languages supported that are not the default English.
